@@ -1,7 +1,8 @@
 object bubblesort {
 
   /* initial testing of bubble sort  with time complexity of O(n2)*/
-
+  // bubble sort alg link to study
+  // https://javarevisited.blogspot.com/2014/08/bubble-sort-algorithm-in-java-with.html#axzz5ArdIFI7y
   def main(args: Array[String]): Unit = {
 
     //declaring a list
