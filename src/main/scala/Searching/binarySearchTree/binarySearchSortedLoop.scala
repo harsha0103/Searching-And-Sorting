@@ -4,7 +4,7 @@ package searching.binarySearchTree
 object binarySearchSortedLoop {
   def main(args: Array[String]): Unit = {
     var initailarray = Array(1, 2, 3, 4, 5,6,7,7,8)
-    var number = 5
+    var number = 7
     var maxlen = initailarray.length-1
     var result = binarySearchRes(initailarray,0, maxlen,number)
 
@@ -17,38 +17,21 @@ object binarySearchSortedLoop {
   }
 
   def binarySearchRes(array: Array[Int], minlen :Int ,maxlen: Int, number: Int): Int = {
+          var min= minlen
+          var max= maxlen
 
-    var mid = (maxlen+minlen)/2
-    for (array[mid])
-      {
-
-
-
-
-      }
-
-
-
-
-    if (maxlen > 1) {
-      //finding the pivot of the element
-      var mid = minlen + (maxlen -minlen) / 2
-      if (array(mid) == number) {
-        return mid
-      }
-      else if (array(mid) > number) {
-        binarySearchRes(array,minlen,mid-1, number)
-      }
-      else {
-        binarySearchRes(array,mid+1,maxlen, number)
-
-      }
-    }
-    else {
-      return -1
-    }
+          while (min!= max) {
+            var mid = min+(max-min)/2
+            if (array(mid) == number) {
+              return mid
+            }
+            else if (array(mid) >number){
+              max= mid-1
+            }
+            else{
+               min=mid+1
+            }
+          }
+  return -1
   }
-
-
-
 }
