@@ -1,6 +1,9 @@
 package searching.binarySearchTree
 // The idea of binary search is to use the information that the array is
 // sorted and reduce the time complexity to O(Log n).
+// The time complexity of Binary Search can be written as T(n) = T(n/2) + c.
+// https://www.geeksforgeeks.org/binary-search/.
+
 object binarySearchSortedLoop {
   def main(args: Array[String]): Unit = {
     var initailarray = Array(1, 2, 3, 4, 5,6,7,7,8)
